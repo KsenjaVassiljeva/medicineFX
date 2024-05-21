@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/newuser/NewuserController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicinesptv22/MedicineSptv22.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicine/listmedicine/listmedicine.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/listusers/ListusersController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicine/newmedicicne/newmedicine.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicine/buymedicine/buymedicine.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicines/medicine/medicine.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/customer/newcustomer/NewcustomerController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicines/medicine/medicine.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/entity/User.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicinesptv22/HomeController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/entity/History.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicine/newmedicicne/NewmedicineController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/entity/Sale.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicinesptv22/home.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicine/newmedicicne/newmedicine.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/tools/PassEncrypt.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/customer/newcustomer/newcustomer.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicine/listmedicine/listmedicine.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/newuser/newuser.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/range/RangepageController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/newuser/newuser.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/entity/Medicine.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/loginform/loginform.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/entity/Customer.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/admin/adminpanel/AdminpanelController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/userprofile/userprofile.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicine/listmedicine/ListmedicineController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicine/buymedicine/buymedicine.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/admin/adminpanel/adminpanel.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/listusers/listusers.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/loginform/LoginformController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/userprofile/UserprofileController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/range/rangepage.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/loginform/loginform.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/range/rangepage.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicinesptv22/home.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/customer/newcustomer/newcustomer.fxml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/META-INF/persistence.xml</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicines/medicine/MedicineController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/listusers/listusers.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/users/userprofile/userprofile.css</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/medicine/buymedicine/BuymedicineController.java</file>
+            <file>file:/D:/SPTV22/MedicineSptv22/src/admin/adminpanel/adminpanel.css</file>
+        </group>
+    </open-files>
+</project-private>
