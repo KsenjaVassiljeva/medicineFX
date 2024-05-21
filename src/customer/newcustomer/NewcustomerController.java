@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package customer.newcustomer;
 
-import medicine.newmedicicne.NewmedicineController;
+import medicine.newmedicine.NewmedicineController;
 import entity.Customer;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,9 +13,11 @@ import javafx.stage.Stage;
 public class NewcustomerController implements Initializable {
 
     private NewmedicineController newmedicineController;
+    
     @FXML private TextField tfFirstname;
     @FXML private TextField tfLastname;
     @FXML private Label lbInfoNewAuthor;
+    
     private Stage stage;
 
     @Override
@@ -62,4 +59,3 @@ public class NewcustomerController implements Initializable {
         this.stage = modalWindowsAddAuthors;
     }
 }
-

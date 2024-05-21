@@ -10,7 +10,7 @@ import admin.adminpanel.AdminpanelController;
 import medicines.medicine.MedicineController;
 import medicine.listmedicine.ListmedicineController;
 
-import medicine.newmedicicne.NewmedicineController;
+import medicine.newmedicine.NewmedicineController;
 import entity.Medicine;
 import java.io.IOException;
 import java.net.URL;
@@ -45,6 +45,7 @@ public class HomeController implements Initializable {
     @FXML private Label lbHello;
     @FXML private Label lbInfo;
     @FXML private VBox vbContent;
+    
     
     @FXML
     public void showRangepage(){
@@ -171,34 +172,34 @@ public class HomeController implements Initializable {
         }
     }
     @FXML
-    private void addNewMedicine(){
-        if(medicinesptv22.MedicineSptv22.user == null){
+    private void addNewMedicine() {
+        if (medicinesptv22.MedicineSptv22.user == null) {
             getLbInfo().getStyleClass().clear();
             getLbInfo().getStyleClass().add("infoError");
-            getLbInfo().setText("Войдите в программу со своим логином!"); 
+            getLbInfo().setText("Войдите в программу со своим логином!");
             return;
         }
-        if(!medicinesptv22.MedicineSptv22.user.getRoles().contains(medicinesptv22.MedicineSptv22.ROLES.MANAGER.toString())){
+        if (!medicinesptv22.MedicineSptv22.user.getRoles().contains(medicinesptv22.MedicineSptv22.ROLES.MANAGER.toString())) {
             getLbInfo().getStyleClass().clear();
             getLbInfo().getStyleClass().add("infoError");
-            getLbInfo().setText("У вас нет прав на этот ресурс. Только для менеджеров!"); 
+            getLbInfo().setText("У вас нет прав на этот ресурс. Только для менеджеров!");
             return;
         }
-         try {
+        try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/medicine/newmedicine/newmedicine.fxml"));
-            VBox vbNewBook = loader.load();
-            NewmedicineController newbookController = loader.getController();
-            newbookController.setHomeController(this);
-            app.getPrimaryStage().setTitle("MedicineSptv22 - Добавление новой лекарства");
+            VBox vbNewMedicine = loader.load();
+            NewmedicineController newmedicineController = loader.getController();
+            newmedicineController.setHomeController(this);
+            app.getPrimaryStage().setTitle("MedicineSptv22 - Добавление нового лекарства");
             this.lbInfo.setText("");
             vbContent.getChildren().clear();
-            vbContent.getChildren().add(vbNewBook);
-            
+            vbContent.getChildren().add(vbNewMedicine);
         } catch (IOException ex) {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
     @FXML 
     private void listUsers(){
         if(medicinesptv22.MedicineSptv22.user == null){
