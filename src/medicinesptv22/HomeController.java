@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package medicinesptv22;
 
 /*
@@ -111,7 +106,7 @@ public class HomeController implements Initializable {
     }
         
     @FXML
-    public void login(){
+    public void login() {
         loginWindow = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/users/loginform/loginform.fxml"));
@@ -119,19 +114,17 @@ public class HomeController implements Initializable {
             VBox vbLoginFormRoot = loader.load();
             LoginformController loginformController = loader.getController();
             loginformController.setHomeController(this);
-            Scene scene = new Scene(vbLoginFormRoot,401,180);
+            Scene scene = new Scene(vbLoginFormRoot, 401, 180);
             loginWindow.setTitle("Вход");
             loginWindow.initModality(Modality.WINDOW_MODAL);
             loginWindow.initOwner(getApp().getPrimaryStage());
             loginWindow.setScene(scene);
             loginWindow.show();
-            
-        } catch (Exception e) {
-            
-            System.out.println("error: "+e);
+        } catch (IOException e) {
+            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, "Error loading login form FXML", e);
         }
-        
     }
+
     
     @FXML
     private void addNewUser(){
@@ -177,7 +170,7 @@ public class HomeController implements Initializable {
         }
     }
     @FXML
-    private void addNewBook(){
+    private void addNewMedicine(){
         if(medicinesptv22.MedicineSptv22.user == null){
             getLbInfo().getStyleClass().clear();
             getLbInfo().getStyleClass().add("infoError");
@@ -257,9 +250,8 @@ public class HomeController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        lbHello.setText("Добро пожаловать в нашу библиотеку!");
-       
-    }    
+        lbHello.setText("Добро пожаловать в нашу Аптеку!");
+    }   
 
     void setApp(MedicineSptv22 app) {
         this.app = app;

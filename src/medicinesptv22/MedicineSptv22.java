@@ -3,10 +3,13 @@ package medicinesptv22;
 import entity.Customer;
 import entity.User;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -28,22 +31,22 @@ public class MedicineSptv22 extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
-        this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("MedicineSptv22");
+    public void start(Stage primaryStage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("home.fxml"));
-            Parent root = loader.load();
-            HomeController homeController = loader.getController();
-            homeController.setApp(this);
-            Scene scene = new Scene(root, 600, 400);
-            scene.getStylesheets().add(getClass().getResource("home.css").toExternalForm());
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/medicinesptv22/home.fxml"));
+            VBox root = loader.load();
+            HomeController controller = loader.getController();
+            controller.setApp(this);
+
+            Scene scene = new Scene(root);
             primaryStage.setScene(scene);
+            primaryStage.setTitle("MedicineSptv22");
             primaryStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+            Logger.getLogger(MedicineSptv22.class.getName()).log(Level.SEVERE, null, e);
         }
     }
+
 
     private void checkSuperUser() {
         try {

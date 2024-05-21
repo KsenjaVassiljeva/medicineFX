@@ -92,7 +92,7 @@ public class RangepageController implements Initializable {
                     setText(null);
                 }else{
                     setText(((Medicine)entry.getKey()).getName()
-                                + " прочитана "
+                                + " Продано "
                                 + entry.getValue()
                                 + " раз(а)");
                 }
@@ -129,7 +129,7 @@ public class RangepageController implements Initializable {
         TableColumn<User, String> loginColumn = new TableColumn<>("Логин");
         loginColumn.setCellValueFactory(new PropertyValueFactory<>("login"));
 
-        TableColumn<User, Integer> rangeColumn = new TableColumn<>("Прочитанных книг");
+        TableColumn<User, Integer> rangeColumn = new TableColumn<>("Продано лекарств");
         rangeColumn.setCellValueFactory(user -> {
             int count = sortedMapRatingUser.get(user.getValue());
             return new javafx.beans.property.SimpleIntegerProperty(count).asObject();
