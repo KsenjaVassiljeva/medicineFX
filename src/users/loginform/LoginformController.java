@@ -6,7 +6,6 @@
 package users.loginform;
 
 import entity.User;
-import java.awt.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -16,45 +15,49 @@ import javafx.scene.control.TextField;
 import medicinesptv22.HomeController;
 import tools.PassEncrypt;
 
-/**
- * FXML Controller class
- *
- * @author admin
- */
 public class LoginformController implements Initializable {
     private HomeController homeController;
-    @FXML private Label lbLoginInfo;
-    @FXML private TextField tfLogin;
-    @FXML private TextField tfPassword;
-    /**
-     * Initializes the controller class.
-     */
     
-    @FXML private void clickLogin(){
-        String ligin = tfLogin.getText();
+    @FXML 
+    private Label lbLoginInfo;
+    
+    @FXML 
+    private TextField tfLogin;
+    
+    @FXML 
+    private TextField tfPassword;
+    
+    @FXML 
+    private void clickLogin() {
+        String login = tfLogin.getText();
         String password = tfPassword.getText();
+        
         try {
             User user = (User) homeController.getApp().getEntityManager().createQuery("SELECT u FROM User u WHERE u.login=:login")
-                .setParameter("login", ligin)
+                .setParameter("login", login)
                 .getSingleResult();
+            
             PassEncrypt pe = new PassEncrypt();
-            String encriptPass = pe.getEncryptPassword(password, pe.getSalt());
-            if(!user.getPassword().equals(encriptPass)){
+            String encryptedPass = pe.getEncryptPassword(password, pe.getSalt());
+            
+            if (!user.getPassword().equals(encryptedPass)) {
                 lbLoginInfo.setText("Пароли не совпадают");
                 System.out.println("Пароли не совпадают");
                 return;
             }
-            medicinesptv22.MedicineSptv22.user=user;
+            
+            medicinesptv22.MedicineSptv22.user = user;
             homeController.getLbInfo().getStyleClass().clear();
             homeController.getLbInfo().getStyleClass().add("info");
-            homeController.getLbInfo().setText("Вы вошли как "+user.getLogin());
+            homeController.getLbInfo().setText("Вы вошли как " + user.getLogin());
             homeController.getLoginWindow().close();
         } catch (Exception e) {
             lbLoginInfo.setText("Нет такого пользователя");
-            System.out.println("error: "+e);
+            System.out.println("Error: ");
+            e.printStackTrace();
         }
-        
     }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
